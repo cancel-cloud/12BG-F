@@ -43,6 +43,19 @@ public class Schule {
         return null;
     }
 
+    public Schueler getSchueler(String name) {
+        for (Schueler s : schueler) {
+            if (s.getName().equals(name)) {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<Schueler> getSchueler() {
+        return schueler;
+    }
+
 
     //TODO: Finde einen Sinnvollen Grund einen Schueler zu aendern
     public void aenderSchueler() {

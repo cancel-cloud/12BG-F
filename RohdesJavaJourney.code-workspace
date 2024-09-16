@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "RohdesJavaJourney"
+		},
+		{
+			"name": "12BG-F",
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic",
+		"java.dependency.syncWithFolderExplorer": false
+	}
+}

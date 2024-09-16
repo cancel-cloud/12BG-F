@@ -1,5 +1,7 @@
 package de.lukas;
 
+import java.time.LocalDate;
+
 import de.lukas.SchuelerVerwaltung.Klasse;
 import de.lukas.SchuelerVerwaltung.KontaktAdresse;
 import de.lukas.SchuelerVerwaltung.Schueler;
@@ -12,39 +14,40 @@ public class Schuelersoftware {
         System.out.println("Schule erstellt: " + schule.getName());
 
         // Create classes
-        Klasse klasse5a = new Klasse("5a");
-        Klasse klasse6b = new Klasse("6b");
+        Klasse klasse5a = new Klasse("5a", schule);
+        Klasse klasse6b = new Klasse("6b", schule);
 
-        // Create students
-        Schueler max = new Schueler("Mustermann", "Max", klasse5a);
-        Schueler anna = new Schueler("Schmidt", "Anna", klasse5a);
-        Schueler tim = new Schueler("Weber", "Tim", klasse6b);
+        // Create and add students with contact addresses
+        Schueler schueler = new Schueler("Mustermann", "Max", klasse5a, LocalDate.of(2010, 5, 15));
+        schueler.fuegeKontaktadresseHinzu("E-Mail", "max.mustermann@example.com");
+        schueler.fuegeKontaktadresseHinzu("Telefon", "0123456789");
+        schule.addSchueler(schueler);
 
-        // Add contact addresses to students
-        max.fuegeKontaktadresseHinzu("E-Mail", "max.mustermann@example.com");
-        max.fuegeKontaktadresseHinzu("Telefon", "0123456789");
-        anna.fuegeKontaktadresseHinzu("E-Mail", "anna.schmidt@example.com");
-        tim.fuegeKontaktadresseHinzu("E-Mail", "tim.weber@example.com");
+        schueler = new Schueler("Schmidt", "Anna", klasse5a, LocalDate.of(2011, 8, 20));
+        schueler.fuegeKontaktadresseHinzu("E-Mail", "anna.schmidt@example.com");
+        schule.addSchueler(schueler);
 
-        // Add students to school
-        schule.addSchueler(max);
-        schule.addSchueler(anna);
-        schule.addSchueler(tim);
+        schueler = new Schueler("Weber", "Tim", klasse6b, LocalDate.of(2012, 3, 10));
+        schueler.fuegeKontaktadresseHinzu("E-Mail", "tim.weber@example.com");
+        schule.addSchueler(schueler);
 
         // Print all students and their contact addresses
         System.out.println("\nAlle Schüler und ihre Kontaktadressen:");
-        printSchuelerInfo(max);
-        printSchuelerInfo(anna);
-        printSchuelerInfo(tim);
+        for (Schueler s : new Schueler[]{schule.getSchueler("Mustermann", "Max"), 
+                                         schule.getSchueler("Schmidt", "Anna"), 
+                                         schule.getSchueler("Weber", "Tim")}) {
+            printSchuelerInfo(s);
+        }
 
         // Test removing a contact address
         System.out.println("\nEntferne eine Kontaktadresse von Max:");
-        max.removeKontaktaddresse("0123456789");
-        printSchuelerInfo(max);
+        schueler = schule.getSchueler("Mustermann", "Max");
+        schueler.removeKontaktaddresse("0123456789");
+        printSchuelerInfo(schueler);
 
         // Test getting all contact addresses of a specific type
         System.out.println("\nAlle E-Mail-Adressen von Max:");
-        for (KontaktAdresse adresse : max.holeAlleKontaktadressenEinesTyps("E-Mail")) {
+        for (KontaktAdresse adresse : schueler.holeAlleKontaktadressenEinesTyps("E-Mail")) {
             System.out.println(adresse.getWert());
         }
 
@@ -64,12 +67,12 @@ public class Schuelersoftware {
 
         // Remove a student from the school
         System.out.println("\nEntferne einen Schüler aus der Schule:");
-        schule.removeSchueler(tim);
+        schule.removeSchueler(schule.getSchueler("Weber", "Tim"));
         System.out.println("Tim Weber existiert noch: " + schule.checkifSchuelerExists("Weber", "Tim"));
     }
 
     private static void printSchuelerInfo(Schueler schueler) {
-        System.out.println(schueler.getVorname() + " " + schueler.getName() + " (Klasse " + schueler.getKlasse().getName() + "):");
+        System.out.println(schueler.getVorname() + " " + schueler.getName() + " (Klasse " + schueler.getKlasse().getName() + ", Geburtsdatum: " + schueler.getGeburtsdatum() + "):");
         for (KontaktAdresse adresse : schueler.getKontaktAdresse()) {
             System.out.println("  " + adresse.getTyp() + ": " + adresse.getWert());
         }
