@@ -8,8 +8,8 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Set;
 
-import de.lukas.SchuelerVerwaltung.Klasse;
-import de.lukas.SchuelerVerwaltung.Schule;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
 
 public class KlasseCSVHelper {
     private static final String CSV_FILE = "classes.csv";

@@ -1,11 +1,11 @@
-package de.lukas;
+package de.lukas.SchuelerVerwaltung;
 
 import java.time.LocalDate;
 
-import de.lukas.SchuelerVerwaltung.Klasse;
-import de.lukas.SchuelerVerwaltung.KontaktAdresse;
-import de.lukas.SchuelerVerwaltung.Schueler;
-import de.lukas.SchuelerVerwaltung.Schule;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.KontaktAdresse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
 
 public class Schuelersoftware {
     public static void main(String[] args) {

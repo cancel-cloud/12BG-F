@@ -1,4 +1,4 @@
-package de.lukas.SchuelerVerwaltung;
+package de.lukas.SchuelerVerwaltung.independatClasses;
 
 import java.util.List;
 import java.util.Objects;

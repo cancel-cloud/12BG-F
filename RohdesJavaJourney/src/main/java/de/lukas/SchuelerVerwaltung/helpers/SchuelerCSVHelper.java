@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import de.lukas.SchuelerVerwaltung.Klasse;
-import de.lukas.SchuelerVerwaltung.Schueler;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
 
 public class SchuelerCSVHelper {
     private static final String CSV_FILE = "students.csv";

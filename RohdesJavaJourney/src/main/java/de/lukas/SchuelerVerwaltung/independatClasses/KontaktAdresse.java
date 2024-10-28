@@ -1,4 +1,4 @@
-package de.lukas.SchuelerVerwaltung;
+package de.lukas.SchuelerVerwaltung.independatClasses;
 
 public class KontaktAdresse {
     private String typ;

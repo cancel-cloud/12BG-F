@@ -1,7 +1,13 @@
-package de.lukas.SchuelerVerwaltung;
+package de.lukas.SchuelerVerwaltung.independatClasses;
 
 import java.util.ArrayList;
 
+
+/**
+ * @author Lukas
+ * @version 1.0
+ * @since 1.0
+ */
 public class Schule {
     private String name;
     private ArrayList<Schueler> schueler;

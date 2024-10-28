@@ -1,4 +1,4 @@
-package de.lukas.SchuelerVerwaltung;
+package de.lukas.SchuelerVerwaltung.independatClasses;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
