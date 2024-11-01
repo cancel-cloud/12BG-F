@@ -1,4 +1,4 @@
-package de.lukas.FlugVerwaltung;
+package de.lukas.GesammtFlugVerwaltung;
 
 class Sitzplatz {
     private int sitzReihe;

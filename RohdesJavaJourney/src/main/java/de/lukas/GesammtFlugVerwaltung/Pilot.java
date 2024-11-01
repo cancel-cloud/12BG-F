@@ -1,4 +1,4 @@
-package de.lukas.FlugVerwaltung;
+package de.lukas.GesammtFlugVerwaltung;
 
 class Pilot extends Person {
     private String heimatbasis;

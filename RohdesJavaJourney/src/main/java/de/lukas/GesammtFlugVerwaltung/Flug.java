@@ -1,4 +1,4 @@
-package de.lukas.FlugVerwaltung;
+package de.lukas.GesammtFlugVerwaltung;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

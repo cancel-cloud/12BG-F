@@ -1,16 +1,18 @@
 package de.lukas.FlugVerwaltung;
 
 public class Person {
-    protected int id;
-    protected String vorname;
-    protected String nachname;
-    protected String adresse;
-    protected String email;
-    protected String telefonnummer;
-    protected int autowert = 0;
+    private int id;
+    private String vorname;
+    private String nachname;
+    private String adresse;
+    private String email;
+    private String telefonnummer;
+    private static int autowert=0;
 
-    public Person(String vorname, String nachname, String adresse,
-                  String email, String telefonnummer) {
+
+    public Person(String vorname, String nachname, String adresse, String email, String telefonnummer) {
+        autowert++;
+        this.id = autowert;
         this.vorname = vorname;
         this.nachname = nachname;
         this.adresse = adresse;
@@ -18,29 +20,12 @@ public class Person {
         this.telefonnummer = telefonnummer;
     }
 
-    // Getter und Setter
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
-    }
-
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setTelefonnummer(String telefonnummer) {
-        this.telefonnummer = telefonnummer;
-    }
-
-    @Override
     public String toString() {
-        return String.format("%s %s", vorname, nachname);
+        return ("ID: " + this.id
+                + "\nName: " + this.vorname + " " + this.nachname
+                + "\nAdresse: " + this.adresse
+                + "\nEmail: " + this.email
+                + "\nTelefonnummer: " + this.telefonnummer
+        );
     }
 }
