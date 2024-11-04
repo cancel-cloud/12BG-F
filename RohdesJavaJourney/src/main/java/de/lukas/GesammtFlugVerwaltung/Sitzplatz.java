@@ -1,8 +1,8 @@
 package de.lukas.GesammtFlugVerwaltung;
 
 class Sitzplatz {
-    private int sitzReihe;
-    private char sitzBuchstabe;
+    private final int sitzReihe;
+    private final char sitzBuchstabe;
     private Kunde kunde;
 
     public Sitzplatz(int reihe, char buchstabe) {

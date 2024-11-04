@@ -2,10 +2,10 @@ package de.lukas.GesammtFlugVerwaltung;
 
 class Ticket {
     private String ticketnummer;
-    private int autowert = 0;
-    private Kunde kunde;
-    private Flug flug;
-    private Sitzplatz sitzplatz;
+    private final int autowert = 0;
+    private final Kunde kunde;
+    private final Flug flug;
+    private final Sitzplatz sitzplatz;
 
     public Ticket(Kunde kunde, Flug flug, Sitzplatz sitzplatz) {
         this.kunde = kunde;

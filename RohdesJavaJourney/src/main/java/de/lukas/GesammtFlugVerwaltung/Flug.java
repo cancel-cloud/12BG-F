@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Flug {
-    private String flugNummer;
-    private String startFlughafen;
-    private LocalDateTime abflugzeit;
-    private String zielFlughafen;
-    private LocalDateTime ankunftzeit;
-    private String flugzeugModell;
-    private String status;
-    private int km;
-    private Pilot pilot;
-    private List<Sitzplatz> sitzplaetze;
+    private final String flugNummer;
+    private final String startFlughafen;
+    private final LocalDateTime abflugzeit;
+    private final String zielFlughafen;
+    private final LocalDateTime ankunftzeit;
+    private final String flugzeugModell;
+    private final String status;
+    private final int km;
+    private final Pilot pilot;
+    private final List<Sitzplatz> sitzplaetze;
 
     public Flug(String flugNummer, Pilot pilot, LocalDateTime abflugzeit,
                 String start, LocalDateTime ankunftzeit, String ziel,

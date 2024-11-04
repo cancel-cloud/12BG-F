@@ -11,6 +11,6 @@ public class Main {
                 true,
                 1000
         );
-        System.out.print(manfred.toString());
+        System.out.print(manfred);
     }
 }

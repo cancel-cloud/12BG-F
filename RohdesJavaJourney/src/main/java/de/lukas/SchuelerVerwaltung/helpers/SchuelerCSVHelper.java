@@ -1,16 +1,12 @@
 package de.lukas.SchuelerVerwaltung.helpers;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
+
+import java.io.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-
-import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
-import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
 
 public class SchuelerCSVHelper {
     private static final String CSV_FILE = "students.csv";

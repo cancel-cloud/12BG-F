@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class TicketVerwaltung {
-    private List<Ticket> tickets;
-    private List<Person> piloten;
+    private final List<Ticket> tickets;
+    private final List<Person> piloten;
 
     public TicketVerwaltung() {
         tickets = new ArrayList<>();

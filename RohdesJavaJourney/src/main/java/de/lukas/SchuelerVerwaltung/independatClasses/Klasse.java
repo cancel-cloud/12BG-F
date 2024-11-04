@@ -4,22 +4,22 @@ import java.util.List;
 import java.util.Objects;
 
 public class Klasse {
-    private String name;
-    private Schule schule;
+    private final String name;
+    private final Schule schule;
 
     @Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Klasse klasse = (Klasse) o;
-    return Objects.equals(name, klasse.name) &&
-           Objects.equals(schule, klasse.schule);
-}
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klasse klasse = (Klasse) o;
+        return Objects.equals(name, klasse.name) &&
+                Objects.equals(schule, klasse.schule);
+    }
 
-@Override
-public int hashCode() {
-    return Objects.hash(name, schule);
-}
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, schule);
+    }
 
     public Klasse(String name, Schule schule) {
         this.name = name;

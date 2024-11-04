@@ -15,7 +15,7 @@ public class Main {
                 "+49 123 456789",
                 "BER"
         );
-        System.out.println("Created pilot: " + pilot.toString());
+        System.out.println("Created pilot: " + pilot);
 
         // Create customers
         Kunde kunde1 = new Kunde(
@@ -39,9 +39,9 @@ public class Main {
         );
 
         System.out.println("\nCreated customers:");
-        System.out.println(kunde1.toString() + " (Vegetarier: " + kunde1.isVegetarier() +
+        System.out.println(kunde1 + " (Vegetarier: " + kunde1.isVegetarier() +
                 ", Bonusmeilen: " + kunde1.getBonusmeilen() + ")");
-        System.out.println(kunde2.toString() + " (Vegetarier: " + kunde2.isVegetarier() +
+        System.out.println(kunde2 + " (Vegetarier: " + kunde2.isVegetarier() +
                 ", Bonusmeilen: " + kunde2.getBonusmeilen() + ")");
 
         // Create a flight
@@ -69,7 +69,7 @@ public class Main {
         // Book a seat for kunde1
         boolean bookingSuccess = flug.reserviereSitzplatz(kunde1, "12A");
         if (bookingSuccess) {
-            System.out.println("\nBooking successful for " + kunde1.toString());
+            System.out.println("\nBooking successful for " + kunde1);
             // Add bonus miles for the flight
             kunde1.modifiziereBonusmeilen(500);
             System.out.println("New bonus miles balance: " + kunde1.getBonusmeilen());

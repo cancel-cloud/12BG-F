@@ -1,13 +1,13 @@
 package de.lukas.SchuelerVerwaltung;
 
-import java.util.Set;
-
-import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
-import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
-import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
 import de.lukas.SchuelerVerwaltung.helpers.KlasseCSVHelper;
 import de.lukas.SchuelerVerwaltung.helpers.SchoolCSVHelper;
 import de.lukas.SchuelerVerwaltung.helpers.SchuelerCSVHelper;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
+
+import java.util.Set;
 
 public class WorkingSchuelersoftware {
     public static void main(String[] args) {

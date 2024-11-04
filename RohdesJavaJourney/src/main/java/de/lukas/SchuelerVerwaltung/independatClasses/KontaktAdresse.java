@@ -1,8 +1,8 @@
 package de.lukas.SchuelerVerwaltung.independatClasses;
 
 public class KontaktAdresse {
-    private String typ;
-    private String wert;
+    private final String typ;
+    private final String wert;
 
     public KontaktAdresse(String typ, String wert) {
         this.typ = typ;

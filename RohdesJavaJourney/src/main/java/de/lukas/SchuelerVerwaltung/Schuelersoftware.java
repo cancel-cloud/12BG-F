@@ -1,11 +1,11 @@
 package de.lukas.SchuelerVerwaltung;
 
-import java.time.LocalDate;
-
 import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
 import de.lukas.SchuelerVerwaltung.independatClasses.KontaktAdresse;
 import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
 import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
+
+import java.time.LocalDate;
 
 public class Schuelersoftware {
     public static void main(String[] args) {
@@ -33,9 +33,9 @@ public class Schuelersoftware {
 
         // Print all students and their contact addresses
         System.out.println("\nAlle Schüler und ihre Kontaktadressen:");
-        for (Schueler s : new Schueler[]{schule.getSchueler("Mustermann", "Max"), 
-                                         schule.getSchueler("Schmidt", "Anna"), 
-                                         schule.getSchueler("Weber", "Tim")}) {
+        for (Schueler s : new Schueler[]{schule.getSchueler("Mustermann", "Max"),
+                schule.getSchueler("Schmidt", "Anna"),
+                schule.getSchueler("Weber", "Tim")}) {
             printSchuelerInfo(s);
         }
 

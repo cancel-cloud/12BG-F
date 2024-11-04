@@ -7,12 +7,12 @@ import java.util.Objects;
 
 
 public class Schueler {
-    private String name;
-    private String vorname;
-    private ArrayList<KontaktAdresse> kontaktAdresse;
-    private Klasse klasse;
-    private LocalDate geburtsdatum;
-    
+    private final String name;
+    private final String vorname;
+    private final ArrayList<KontaktAdresse> kontaktAdresse;
+    private final Klasse klasse;
+    private final LocalDate geburtsdatum;
+
 
     public Schueler(String name, String vorname, Klasse klasse, LocalDate geburtsdatum) {
         this.name = name;
@@ -23,20 +23,20 @@ public class Schueler {
     }
 
     @Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Schueler schueler = (Schueler) o;
-    return Objects.equals(name, schueler.name) &&
-           Objects.equals(vorname, schueler.vorname) &&
-           Objects.equals(geburtsdatum, schueler.geburtsdatum) &&
-           Objects.equals(klasse, schueler.klasse);
-}
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Schueler schueler = (Schueler) o;
+        return Objects.equals(name, schueler.name) &&
+                Objects.equals(vorname, schueler.vorname) &&
+                Objects.equals(geburtsdatum, schueler.geburtsdatum) &&
+                Objects.equals(klasse, schueler.klasse);
+    }
 
-@Override
-public int hashCode() {
-    return Objects.hash(name, vorname, geburtsdatum, klasse);
-}
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, vorname, geburtsdatum, klasse);
+    }
 
     public String getName() {
         return name;
@@ -65,7 +65,7 @@ public int hashCode() {
 
     public void removeKontaktaddresse(String wert) {
         for (int i = 0; i < kontaktAdresse.size(); i++) {
-            if(kontaktAdresse.get(i).getWert().equals(wert)) {
+            if (kontaktAdresse.get(i).getWert().equals(wert)) {
                 this.kontaktAdresse.remove(kontaktAdresse.remove(i));
             }
         }
@@ -97,24 +97,24 @@ public int hashCode() {
         String name = parts[0].trim();
         String vorname = parts[1].trim();
         LocalDate geburtsdatum;
-        
+
         try {
             geburtsdatum = LocalDate.parse(parts[2].trim());
         } catch (DateTimeParseException e) {
             System.out.println("Warning: Invalid date format for " + name + " " + vorname + ". Setting birthdate to null.");
             geburtsdatum = null;
         }
-    
+
         // Check if a student with the same name already exists in the same school
-        if(klasse.getSchule().getSchueler(name) != null) {
+        if (klasse.getSchule().getSchueler(name) != null) {
             System.out.println("Warnung: Ein Schueler mit dem Namen '" + name + "' existiert bereits in der Schule.");
             return null; // Abort the program at this point
         }
-        
+
         System.out.println("Schueler " + vorname + " " + name + " wurde erstellt.");
-    
+
         Schueler schueler = new Schueler(name, vorname, klasse, geburtsdatum);
-        
+
         for (int i = 3; i < parts.length; i += 2) {
             if (i + 1 < parts.length) {
                 String typ = parts[i].trim();

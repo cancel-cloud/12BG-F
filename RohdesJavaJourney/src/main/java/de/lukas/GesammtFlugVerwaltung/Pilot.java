@@ -1,7 +1,7 @@
 package de.lukas.GesammtFlugVerwaltung;
 
 class Pilot extends Person {
-    private String heimatbasis;
+    private final String heimatbasis;
     private boolean imEinsatz;
 
     public Pilot(String vorname, String nachname, String adresse,

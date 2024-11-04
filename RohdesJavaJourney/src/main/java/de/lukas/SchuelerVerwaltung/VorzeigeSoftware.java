@@ -1,22 +1,22 @@
 package de.lukas.SchuelerVerwaltung;
 
-import java.util.Set;
-
-import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
-import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
-import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
 import de.lukas.SchuelerVerwaltung.helpers.KlasseCSVHelper;
 import de.lukas.SchuelerVerwaltung.helpers.SchoolCSVHelper;
 import de.lukas.SchuelerVerwaltung.helpers.SchuelerCSVHelper;
+import de.lukas.SchuelerVerwaltung.independatClasses.Klasse;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schueler;
+import de.lukas.SchuelerVerwaltung.independatClasses.Schule;
+
+import java.util.Set;
 
 /**
  * @author Lukas
  * @version 1.0
- * @since 1.0
  * @category Software
+ * @since 1.0
  */
 public class VorzeigeSoftware {
-public static void main(String[] args) {
+    public static void main(String[] args) {
         // Laden der Daten aus CSV-Dateien
         Set<Schule> schulen = SchoolCSVHelper.loadSchools();
         Set<Klasse> klassen = KlasseCSVHelper.loadKlassen(schulen);

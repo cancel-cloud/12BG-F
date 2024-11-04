@@ -1,8 +1,8 @@
 package de.lukas.FlugVerwaltung;
 
-public class Kunde extends Person{
+public class Kunde extends Person {
 
-    private boolean isVegetarier;
+    private final boolean isVegetarier;
     private int bonusmeilen;
 
 
@@ -14,7 +14,7 @@ public class Kunde extends Person{
     }
 
     public boolean modifiziereBonusmeilen(int meilen) {
-        if ((bonusmeilen + meilen)  < 0) return false;
+        if ((bonusmeilen + meilen) < 0) return false;
         bonusmeilen += meilen;
         return true;
     }
@@ -22,6 +22,5 @@ public class Kunde extends Person{
     @Override
     public String toString() {
         return (super.toString() + "\nVegetarier: " + isVegetarier + "\nBonusmeilen: " + bonusmeilen);
-
     }
 }

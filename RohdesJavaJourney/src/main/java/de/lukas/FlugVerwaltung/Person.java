@@ -1,13 +1,13 @@
 package de.lukas.FlugVerwaltung;
 
 public class Person {
-    private int id;
-    private String vorname;
-    private String nachname;
-    private String adresse;
-    private String email;
-    private String telefonnummer;
-    private static int autowert=0;
+    private final int id;
+    private final String vorname;
+    private final String nachname;
+    private final String adresse;
+    private final String email;
+    private final String telefonnummer;
+    private static int autowert = 0;
 
 
     public Person(String vorname, String nachname, String adresse, String email, String telefonnummer) {

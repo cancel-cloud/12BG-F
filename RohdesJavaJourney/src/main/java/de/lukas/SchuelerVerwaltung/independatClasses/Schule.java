@@ -9,15 +9,14 @@ import java.util.ArrayList;
  * @since 1.0
  */
 public class Schule {
-    private String name;
-    private ArrayList<Schueler> schueler;
+    private final String name;
+    private final ArrayList<Schueler> schueler;
 
     public Schule(String name) {
         this.name = name;
         this.schueler = new ArrayList<>();
     }
 
-    
 
     public String getName() {
         return name;
@@ -65,7 +64,7 @@ public class Schule {
 
     //TODO: Finde einen Sinnvollen Grund einen Schueler zu aendern
     public void aenderSchueler() {
-       
+
     }
-    
+
 }
