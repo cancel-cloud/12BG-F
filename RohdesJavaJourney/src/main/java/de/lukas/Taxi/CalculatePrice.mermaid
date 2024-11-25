@@ -1,0 +1,6 @@
+graph TD
+    A[Start] --> B{kilometer ≤ 15?}
+B -->|Ja| C[price = 3.50 + kilometer * 2.00]
+B -->|Nein| D["price = 3.50 + 15 * 2.00 + (kilometer - 15) * 1.75"]
+C --> E[Return price]
+D --> E[Return price]

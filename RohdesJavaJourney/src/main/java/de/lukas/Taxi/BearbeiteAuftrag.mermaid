@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant TZ as TaxiZentrale
+    participant T as Taxi
+    participant F as Fahrer
+
+    TZ->>TZ: getTaxisSortiertNachStandort(von)
+    Note over TZ: Suche nach freien Taxis
+
+    loop Für jedes gefundene Taxi
+        TZ->>T: getFahrer()
+        T-->>TZ: fahrer
+        TZ->>F: istBereit()
+        alt Fahrer ist bereit
+            F-->>TZ: true
+            TZ->>T: setAuftrag()
+            Note over TZ: Auftrag vergeben
+            TZ-->>TZ: return true
+        else Fahrer nicht bereit
+            F-->>TZ: false
+            Note over TZ: Nächstes Taxi prüfen
+        end
+    end
+
+    Note over TZ: Kein Taxi gefunden
+    TZ-->>TZ: return false

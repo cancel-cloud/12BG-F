@@ -6,8 +6,7 @@ public class Kunde extends Person {
     private int bonusmeilen;
 
 
-    public Kunde(String vorname, String nachname, String adresse, String email, String telefonnummer,
-                 boolean isVegetarier, int bonusmeilen) {
+    public Kunde(String vorname, String nachname, String adresse, String email, String telefonnummer, boolean isVegetarier, int bonusmeilen) {
         super(vorname, nachname, adresse, email, telefonnummer);
         this.bonusmeilen = bonusmeilen;
         this.isVegetarier = isVegetarier;
@@ -21,6 +20,9 @@ public class Kunde extends Person {
 
     @Override
     public String toString() {
-        return (super.toString() + "\nVegetarier: " + isVegetarier + "\nBonusmeilen: " + bonusmeilen);
+        return (super.toString() +
+                "\nIst Vegetarier: " + this.isVegetarier +
+                "\nBonusmeilen: " + this.bonusmeilen
+        );
     }
 }
