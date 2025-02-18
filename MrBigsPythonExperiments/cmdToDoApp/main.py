@@ -66,6 +66,8 @@ def main():
         elif choice == "2":
             list_tasks()
         elif choice == "3":
+            list_tasks()
+            print("----------------------")
             task_number = input("Gib die Nummer der zu erledigenden Aufgabe ein: ")
             complete_task(task_number)
         elif choice == "4":
