@@ -1,7 +1,536 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# .gitignore file created for free with Tower (https://www.git-tower.com/)
+# For suggestions or improvements please contact us using support@git-tower.com
+# Generated on 2025-06-03
+# Includes: macos, node, python, intellij, webstorm, jupyter, gradle, java
 
-# Ignore Gradle build output directory
-build
+### Universal ###
+# Common files that should be ignored in all projects
+
+# Logs
+*.log
+# Temporary files
+*.tmp
+*~
+
+*.bak
+# Environment files (containing secrets, API keys, credentials)
+.env
+*.env
+.env.*
+
+# Local configuration that shouldn't be shared
+*.local
+
+### Macos ###
+# macOS operating system specific files
 
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+
+Temporary Items
+.apdisk
+*.icloud
+.AppleDB/
+.AppleDesktop/
+
+*.AppleDouble
+*.AppleDB
+.Spotlight-V100/
+.Trashes/
+*.swp
+
+Network Trash Folder/
+.DS_Store?
+.Spotlight-V100
+.Trashes
+
+### Node ###
+# Node.js dependency directory, logs, and environment files
+
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+web_modules/
+
+# Logs
+logs
+*.log
+*.launch
+connect.lock/
+
+libpeerconnection.log
+.history/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+lerna-debug.log*
+.pnpm-debug.log*
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Runtime data
+
+pids
+*.pid
+*.seed
+*.pid.lock
+# Environment
+
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+# Package management
+
+.npm
+package-lock.json
+yarn.lock
+.yarn-integrity
+.yarn/cache
+
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+# Coverage & Test
+
+coverage/
+lib-cov
+*.lcov
+.nyc_output
+# Build output
+
+dist/
+build/
+.next/
+out/
+.nuxt
+
+.output
+# Cache & Temporary
+.cache/
+.temp/
+.grunt
+
+.lock-wscript
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+
+.node_repl_history
+.webpack/
+# TypeScript
+*.tsbuildinfo
+# Optional REPL history
+
+.node_repl_history
+# Additional caches
+.eslintcache
+.stylelintcache
+.parcel-cache
+
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+# Misc
+
+*.tgz
+.serverless/
+.vuepress/dist
+.temp
+.docusaurus
+
+.svelte-kit
+
+### Python ###
+# Python compiled files, virtual environments, and cache
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+pypackages/
+build/
+develop-eggs/
+dist/
+downloads/
+
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+
+.installed.cfg
+*.egg
+MANIFEST
+.venv
+env/
+
+venv/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PyInstaller
+*.manifest
+*.spec
+# Installer logs
+pip-log.txt
+
+pip-delete-this-directory.txt
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage.*
+
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+cover/
+# Translations
+*.mo
+*.pot
+# Django
+
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+# Flask
+instance/
+
+.webassets-cache
+# Scrapy
+.scrapy
+# Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+# pyenv
+#.python-version
+
+# pipenv
+#Pipfile.lock
+# poetry
+#poetry.lock
+# pdm
+
+.pdm.toml
+__pypackages__/
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+# mkdocs
+/site
+# mypy
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+# Cython
+cython_debug/
+# Poetry
+
+poetry.toml
+# ruff
+.ruff_cache/
+# LSP
+pyrightconfig.json
+
+*.sage.py
+.pdm.toml
+profile_default/
+.nox/
+.spyproject
+
+site/
+
+### Intellij ###
+# IntelliJ IDEA editor files and settings
+
+# IntelliJ IDEA and Other JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+.idea_modules/
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+
+.idea/shelf/
+.idea/contentModel.xml
+.idea/dataSources/
+.idea/dataSources.xml
+.idea/dataSources.ids
+
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+
+.idea/libraries
+.idea/deployment.xml
+.idea/mongoSettings.xml
+.idea/httpRequests
+.idea/caches/
+
+.idea/modules.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/artifacts
+.idea/sonarlint/
+
+*.iml.bak
+*.ipr.bak
+*.iws.bak
+.idea_backup/
+.idea/replstate.xml
+
+.idea/checkstyle-idea.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+.idea/assetWizardSettings.xml
+.idea/kotlinc.xml
+.idea/inspectionProfiles/
+.idea/codestream.xml
+.idea/aws.xml
+
+.idea/sonarIssues.xml
+.idea/.gitignore
+.idea/remote-mappings.xml
+.idea/**/usage.statistics.xml
+.idea/**/contentModel.xml
+
+.idea/**/dbnavigator.xml
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
+.idea/**/markdown-navigator/
+.idea/$CACHE_FILE$
+
+.idea/**/azureSettings.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### Webstorm ###
+# WebStorm IDE specific files and settings
+
+# WebStorm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+.idea_modules/
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+
+.idea/jsLibraryMappings.xml
+.idea/watcherTasks.xml
+.idea/jsLinters/
+.idea/inspectionProfiles/
+.idea/codeStyles/
+
+### Jupyter ###
+# Jupyter Notebook checkpoints and temporary files
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints.*
+# Jupyter Notebook temp files
+
+.jupyter/
+jupyter_notebook_config.*
+jupyter_notebook_config.json
+jupyter_notebook_config.py
+jupyter_server_config.*
+
+# Jupyter Lab
+.jupyterlab-config
+.jupyterlab/
+jupyterlab-workspace.json
+labconfig/
+
+lab/
+# Jupyter Cache and Metadata
+.jupyter-cache/
+*.jupyterlite.json
+*.jupytext
+
+*.jupytext.py
+.jupytext.toml
+.jupytext.yml
+# Notebook conversions
+*.nbconvert.ipynb
+
+*.nbconvert/
+*.html
+*.pdf
+*.slides.html
+# Virtual Environments
+
+.env
+venv/
+ENV/
+# Data files (often large)
+*.csv
+
+*.dat
+*.pickle
+*.pkl
+*.h5
+*.hdf5
+
+# Output and visualization files
+plots/
+figures/
+output/
+results/
+
+*.png
+*.jpg
+*.svg
+# Temporary and cache files
+__pycache__/
+
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+### Gradle ###
+# Gradle build tool files and directories
+
+# Gradle
+.gradle/
+build/
+gradle/
+gradlew
+
+gradlew.bat
+*.gradle
+gradle-app.setting
+.gradletasknamecache
+gradle.properties
+
+gradle-wrapper.jar
+gradle-wrapper.properties
+.gradle-cache/
+gradle-build/
+out/
+
+classes/
+*.class
+build-cache/
+.gradle/buildOutputCleanup/
+.gradle/configuration-cache/
+
+gradle/wrapper/
+gradle/caches/
+gradle/daemon/
+gradle/native/
+gradle/wrapper/dists/
+
+!gradle-wrapper.jar
+.gradle/kotlin-profile/
+.gradle/workspace-id.txt
+.gradle/notifications/
+gradle/verification-metadata.xml
+
+!src/**/build/
+*.hprof
+
+### Java ###
+# Java compiled files, build directories, and IDE files
+
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+
+*.rar
+hs_err_pid*
+replay_pid*
+.classpath
+.project
+
+.settings/
+target/
+bin/
+build/
+.settings/
+
+*.launch
+.apt_generated/
+.factorypath
+.springBeans
